@@ -92,17 +92,4 @@ public class BookService implements IBookService{
         }
     }
 
-//    public List<BookEntity> retrieveBookByCategory(String category) {
-//
-//        List<BookEntity> bookEntities = new ArrayList<>();
-//        BookEntity bookEntity = new BookEntity();
-//        for (int i = 0; i < 10; i++) {
-//            if (category.equalsIgnoreCase(bookEntity.getBooktitle())) {
-//
-//                return bookEntities = iBookRepo.
-//            }
-//        }
-//
-//    }
-
 }
