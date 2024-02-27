@@ -37,6 +37,7 @@ public class BookService implements IBookService{
      */
     @Override
     public List<BookEntity> retrieveAllBook() {
+
         return iBookRepo.findAll();
     }
 
@@ -52,7 +53,7 @@ public class BookService implements IBookService{
         if(bookEntity.isPresent()){
             return bookEntity;
         } else {
-            throw new MemberNotFoundException("Author with Given ID is not found in database");
+            throw new MemberNotFoundException("Book with Given ID is not found in database");
         }
     }
 
@@ -70,7 +71,7 @@ public class BookService implements IBookService{
             BeanUtils.copyProperties(bookEntity,bookEntityNew);
             return iBookRepo.save(bookEntity);
         } else {
-            throw new MemberNotFoundException("Author with Given ID is not found in database");
+            throw new MemberNotFoundException("Book with Given ID is not found in database");
         }
 
     }
@@ -88,7 +89,7 @@ public class BookService implements IBookService{
 
             return "Book Deleted Successfully";
         } else {
-            throw new MemberNotFoundException("Author with Given ID is not found in database");
+            throw new MemberNotFoundException("Book with Given ID is not found in database");
         }
     }
 

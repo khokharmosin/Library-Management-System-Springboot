@@ -53,7 +53,7 @@ public class MemberService implements IMemberService {
             BeanUtils.copyProperties(libraryMemberEntity, libraryMemberEntityNew);
             return iMemberRepo.save(libraryMemberEntity);
         } else {
-            throw new MemberNotFoundException("Author with Given ID is not found in database");
+            throw new MemberNotFoundException("Member with Given ID is not found in database");
         }
     }
 
@@ -85,7 +85,7 @@ public class MemberService implements IMemberService {
             iMemberRepo.deleteById(id);
             return "Book Deleted Successfully";
         } else {
-            throw new MemberNotFoundException("Author with Given ID is not found in database");
+            throw new MemberNotFoundException("Member with Given ID is not found in database");
         }
     }
 }
