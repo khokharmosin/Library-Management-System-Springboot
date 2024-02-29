@@ -15,7 +15,7 @@ public class AuthorEntity {
 
     @Id
     private int authorid;
-    @NotBlank(message = "Please Enter the Author Name...")
+
     private String authorname;
     @NotBlank(message = "Please Enter the Author Country...")
     private  String authorcountry;

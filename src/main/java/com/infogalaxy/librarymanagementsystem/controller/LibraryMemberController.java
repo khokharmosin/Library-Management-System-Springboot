@@ -9,8 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-
-
 @RestController
 @RequestMapping("/api/member")
 public class LibraryMemberController {
@@ -49,7 +47,6 @@ public class LibraryMemberController {
         return new ResponseEntity<>(new GlobalResponses("All Members Data Found",HttpStatus.FOUND,iMemberService.retrieveAllMember()),HttpStatus.FOUND);
     }
 
-
     /***
      * API to Update existing member data in database with the help of member ID
      * @param id - Find the Member Data By the given ID
@@ -70,7 +67,6 @@ public class LibraryMemberController {
     public ResponseEntity<?> retrieveMemberById(@PathVariable ("id") int id) {
     return new ResponseEntity<>(new GlobalResponses("Member data Found by id",HttpStatus.FOUND,iMemberService.retrieveMemberById(id)),HttpStatus.FOUND);
     }
-
 
     /***
      * API to Delete existing Member Data from Database with the help of Member ID
